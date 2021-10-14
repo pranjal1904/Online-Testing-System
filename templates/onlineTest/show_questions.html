@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Questions</title>
+</head>
+<body>
+    <h1>List of Questions and Answers</h1>
+    <table>
+        <tr>
+            <th>Question Number</th>
+            <th>Question</th>
+            <th>Answer</th>
+            <th>Marks</th>
+        </tr>
+        {% for q in que %}
+        <tr>
+            <td>{{q.queno}}</td>
+            <td>{{q.que}}</td>
+            <td>{{q.ans}}</td>
+            <td>{{q.marks}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

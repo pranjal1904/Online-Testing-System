@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <a href="http://localhost:8000/test/logout/">Logout</a>
+    <a href="http://localhost:8000/test/start-test/">Restart Test</a>
+    <table>
+        <tr>
+            <td>
+                Number of question &nbsp;
+            </td>
+            <td>
+                Question Number Correctly Answered  &nbsp;
+            </td>
+            <td>
+                Question Number Wrongly Answered &nbsp;
+            </td>
+            <td>
+                Total Marks &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ NumberOfQuestions }}
+            </td>
+            <td>
+                {% for ans in CorrectAnswered %}
+                {{ ans }} 
+                {% endfor %}
+            </td>
+            <td>
+                {% for ans in WrongAnswered %}
+                {{ ans }} 
+                {% endfor %}
+            </td>
+            <td>
+                {{ totalMarks }}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

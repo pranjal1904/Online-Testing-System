@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper</title>
+    <link rel="stylesheet" href="{% static 'css/testStyle.css' %}">
+</head>
+<body>
+    <h1>Question Paper</h1>
+    <form action="http://localhost:8000/test/result/" method="POST">
+        <table>
+            <tr>
+                <td>{{ question.0.que }}</td>
+                <td>&nbsp {{ question.0.marks }}</td>
+            </tr>
+        </table>
+            <tr>
+                <input type="hidden" name="que0" value="{{question.0.que}}">
+                <input type="text" name="ans0" size="50"><br>
+            </tr>
+        <table>
+            <tr>
+                <td>{{ question.1.que }}</td>
+                <td>&nbsp {{ question.1.marks }}</td><br>
+            </tr>
+        </table>
+            <tr>
+                <input type="hidden" name="que1" value="{{question.1.que}}">
+                <input type="text" name="ans1" size="50"><br>
+            </tr>
+        <table>
+            <tr>
+                <td>{{ question.2.que }}</td>
+                <td>&nbsp {{ question.2.marks }}</td><br>
+            </tr>
+        </table>
+            <tr>
+                <input type="hidden" name="que2" value="{{question.2.que}}">
+                <input type="text" name="ans2" size="50"><br>
+            </tr>
+        <table>
+            <tr>
+                <td>{{ question.3.que }}</td>
+                <td>&nbsp {{ question.3.marks }}</td><br>
+            </tr>
+        </table>
+            <tr>
+                <input type="hidden" name="que3" value="{{question.3.que}}">
+                <input type="text" name="ans3" size="50"><br>
+            </tr>
+            <tr>
+                <br>
+                <td><input type="submit" name="Save"></td>
+            </tr>
+    </form>
+
+</body>
+</html>

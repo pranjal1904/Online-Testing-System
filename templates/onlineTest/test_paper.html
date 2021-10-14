@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Conditions</title>
+</head>
+<body>
+    <form action="http://localhost:8000/test/start-test/">
+    <h1>Hello, {{request.session.username}}</h1>
+    <a href="http://localhost:8000/test/logout/">Logout</a>
+    <p>
+        1)All questions are compelsary<br>
+        2)No negative marking<br>
+        3)Time duration 10 minitues<br>
+        4)click on start button<br>
+    </p>
+    <button type="submit">Start Test</button>
+    </form>
+</body>
+</html>

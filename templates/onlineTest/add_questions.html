@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Questions</title>
+</head>
+<body>
+    <h1>Creat New Question</h1>
+    <form action="http://localhost:8000/test/save-question/" method="POST">
+        <table>
+            <tr>
+                <td>Question Number:</td>
+                <td><input type="text" name="Question Number"></td>
+            </tr>
+            <tr>
+                <td>Question:</td>
+                <td><input type="text" name="Question"></td>
+            </tr>
+            <tr>
+                <td>Answer:</td>
+                <td><input type="text" name="Answer"></td>
+            </tr>
+            <tr>
+                <td>Marks:</td>
+                <td><input type="number" name="Marks"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="Save"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
